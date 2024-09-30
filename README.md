@@ -1,7 +1,11 @@
+Library book API using Java Spring Boot, mySQL and H2 database(for testing).
+
 1) Configure mysql properties in ```application.properties```
 2) Run application to initialize table of books
 3) Execute this query to local mySQL database:
-```USE books;
+   
+```
+USE books;
 INSERT INTO books(title, author, release_year, average_rating)
 VALUES ("Animal Farm", "George Orwell", 1945, 4.1),
 ("The Republic", "Plato", -375, 3.9),
@@ -18,16 +22,16 @@ VALUES ("Animal Farm", "George Orwell", 1945, 4.1),
 ("Don Quixote", "Miguel de Cervantes", 1605, 3.9),
 ("Dievų miškas", "Balys Sruoga", 1957, 4.9),
 ("Meditations", "Miguel de Cervantes", 121, 4.5);
+
 ````
 
-
-Filter querying is done by query parameters.
-
-Example endpoints
+Example endpoints:
 1) Find All ```http://localhost:8080/books```
-2) Set user rating ```http://localhost:8080/books/{id}``
-2) Filter by year ```http://localhost:8080/books?minYear=1900&maxYear=2000```
-3) Filter by average rating ```http://localhost:8080/books?minRating=4&maxRating=5```
-4) Filter by average user rating ```http://localhost:8080/books?minUserRating=3&maxUserRating=5```
+2) Set user rating ```http://localhost:8080/books/{id}```
+3) Filter by title ```http://localhost:8080/books?title=The```
+4) Filter by author ```http://localhost:8080/books?author=Franz-Kafka```
+5) Filter by year ```http://localhost:8080/books?minYear=1900&maxYear=2000```
+6) Filter by average rating ```http://localhost:8080/books?minRating=4&maxRating=5```
+7) Filter by user rating ```http://localhost:8080/books?minUserRating=3&maxUserRating=5```
 
-Can filter by multiple different parameters.
+Can filter by multiple different parameters together.
