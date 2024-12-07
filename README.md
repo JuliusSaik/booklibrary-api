@@ -1,4 +1,4 @@
-Library book API using Java Spring Boot, mySQL and H2 database(for testing).
+Library book API using Java Spring Boot, mySQL and H2 database(for testing). For Cognizant Sourcery Academy entrance exam.
 
 1) Configure mysql properties in ```application.properties```
 2) Run application to initialize table of books
